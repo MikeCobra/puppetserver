@@ -11,6 +11,8 @@ RUN wget https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb && \
 
 RUN apt-get install -y puppetserver
 
+ADD puppetserver-defaults /etc/default/puppetserver
+
 VOLUME /etc/puppetlabs/code
 VOLUME /opt/puppetlabs/puppet/ssl
 
